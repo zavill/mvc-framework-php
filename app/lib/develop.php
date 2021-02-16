@@ -4,7 +4,6 @@ error_reporting(E_ALL);
 
 function func_debug($value) {
     echo '<pre>';
-    var_dump($value);
+    print_r($value);
     echo '</pre>';
-    exit;
 }
