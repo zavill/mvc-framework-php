@@ -69,14 +69,15 @@ class Router
                     $controller = new $className($this->params);
                     $controller->$action();
                 } else {
-                    die('Экшен ' . $action . ' не найден');
+                    View::render404();
+                    //@todo: логирование ошибки экшена
                 }
             } else {
-                die('Контроллер ' . $className . ' не найден');
+                View::render404();
+                //@todo: логирование ошибки контроллера
             }
         } else {
-            echo '404';
+            View::render404();
         }
-        //
     }
 }
