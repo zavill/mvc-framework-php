@@ -11,12 +11,14 @@ class Router
 
     /**
      * Пути
+     *
      * @var array
      */
     protected $routes = [];
 
     /**
      * Параметры
+     *
      * @var array
      */
     protected $params = [];
@@ -43,6 +45,8 @@ class Router
 
     /**
      * Проверка маршрутов
+     *
+     * @return bool
      */
     public function check(): bool
     {
