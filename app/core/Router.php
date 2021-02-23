@@ -23,14 +23,6 @@ class Router
      */
     protected $params = [];
 
-    public function __construct()
-    {
-        $config = (new Config())->load();
-        foreach ($config['routes'] as $route => $param) {
-            $this->add($route, $param);
-        }
-    }
-
     /**
      * Запись путей в переменную
      *
@@ -63,7 +55,7 @@ class Router
     /**
      * Запуск маршрутов
      */
-    public function run()
+    public function dispatch()
     {
         if ($this->check()) {
             $className = 'app\controllers\\' . ucfirst($this->params['controller']) . 'Controller';
