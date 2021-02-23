@@ -1,0 +1,15 @@
+{
+    "name": "zavill/mvc",
+    "authors": [
+        {
+            "name": "Daniil Zavilohin",
+            "email": "denik6740@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "app/core\\": "app/core/"
+        }
+    }
+}
