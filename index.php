@@ -13,5 +13,8 @@ spl_autoload_register(
     }
 );
 
-(new Router())->run();
+$router = new Router();
 
+$router->add('', ['controller' => 'main', 'action' => 'index']);
+
+$router->dispatch();
