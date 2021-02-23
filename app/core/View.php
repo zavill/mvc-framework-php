@@ -21,11 +21,9 @@ class View
 
     public function render($title, $params = [])
     {
-        extract($params);
-        ob_start();
+        require 'app/views/layouts/' . Config::BASE_LAYOUT . '/header.php';
         require 'app/views/' . $this->path . '.php';
-        $content = ob_get_clean();
-        require 'app/views/layouts/' . Config::BASE_LAYOUT . '.php';
+        require 'app/views/layouts/' . Config::BASE_LAYOUT . '/footer.php';
     }
 
     /**
