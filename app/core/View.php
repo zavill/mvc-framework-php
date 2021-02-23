@@ -21,9 +21,9 @@ class View
 
     public function render($title, $params = [])
     {
-        require 'app/views/layouts/' . Config::BASE_LAYOUT . '/header.php';
-        require 'app/views/' . $this->path . '.php';
-        require 'app/views/layouts/' . Config::BASE_LAYOUT . '/footer.php';
+        require dirname(__DIR__) . '/views/layouts/' . Config::BASE_LAYOUT . '/header.php';
+        require dirname(__DIR__) . '/views/' . $this->path . '.php';
+        require dirname(__DIR__) . '/views/layouts/' . Config::BASE_LAYOUT . '/footer.php';
     }
 
     /**
@@ -32,6 +32,6 @@ class View
     public static function render404()
     {
         http_response_code(404);
-        require 'app/views/404.php';
+        require dirname(__DIR__) . '/views/404.php';
     }
 }
