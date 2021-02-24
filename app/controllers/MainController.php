@@ -10,6 +10,7 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        $this->view->render('Main Page');
+        $params = $this->model->getNews();
+        $this->view->render('Main Page', $params);
     }
 }
